@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/students.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="../images/logo.png" alt="School logo" />
+          <div>
+            <h2>Student Management System</h2>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="../index.html"><span class="nav-icon">🏠</span>Dashboard</a>
+          <a href="students.html"><span class="nav-icon">👨‍🎓</span>Students</a>
+          <a href="add-student.html"><span class="nav-icon">➕</span>Add Student</a>
+          <a href="results.html" class="active"><span class="nav-icon">📊</span>Results</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Academic</p>
+            <h1>Student Results</h1>
+          </div>
+        </header>
+
+        <section class="panel results-panel">
+          <div class="form-group">
+            <label for="studentSelect">Select Student</label>
+            <select id="studentSelect">
+              <option value="">Select a student</option>
+            </select>
+          </div>
+
+          <form id="resultsForm">
+            <div class="results-grid">
+              <label>
+                Mathematics
+                <input type="number" id="mathematics" min="0" max="100" required />
+              </label>
+
+              <label>
+                Programming
+                <input type="number" id="programming" min="0" max="100" required />
+              </label>
+
+              <label>
+                Database
+                <input type="number" id="database" min="0" max="100" required />
+              </label>
+
+              <label>
+                Web Development
+                <input type="number" id="webDevelopment" min="0" max="100" required />
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save Results</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel summary-panel">
+          <h3>Academic Summary</h3>
+          <div id="resultSummary" class="summary-box">
+            Select a student to see result details.
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../data/students.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/results.js"></script>
+  </body>
+</html>

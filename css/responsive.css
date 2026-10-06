@@ -1,0 +1,58 @@
+@media (max-width: 980px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+
+  .stats-grid,
+  .content-grid,
+  .form-grid,
+  .results-grid,
+  .student-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid,
+  .content-grid,
+  .form-grid,
+  .results-grid,
+  .student-card {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .toolbar,
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar {
+    gap: 10px;
+  }
+
+  .sidebar {
+    padding: 15px 10px;
+  }
+
+  .nav-menu a {
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

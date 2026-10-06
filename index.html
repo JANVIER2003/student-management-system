@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="images/image.png">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="images/image.png" alt="School logo" />
+          <div>
+            <h2>Student Management System</h2>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="active"><span class="nav-icon">🏠</span>Dashboard</a>
+          <a href="pages/students.html"><span class="nav-icon">👨‍🎓</span>Students</a>
+          <a href="pages/add-student.html"><span class="nav-icon">➕</span>Add Student</a>
+          <a href="pages/results.html"><span class="nav-icon">📊</span>Results</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Dashboard</h1>
+          </div>
+          <div class="topbar-actions">
+            <a href="pages/add-student.html" class="btn btn-primary">+ Add Student</a>
+          </div>
+        </header>
+
+        <section class="welcome-box">
+          <h3>Welcome back, Admin</h3>
+          <p>Here is a quick summary of student performance and enrollment.</p>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card blue">
+            <div>
+              <p>Total Students</p>
+              <h2 id="totalStudents">0</h2>
+            </div>
+            <span>👨‍🎓</span>
+          </article>
+
+          <article class="stat-card green">
+            <div>
+              <p>Passed</p>
+              <h2 id="passedStudents">0</h2>
+            </div>
+            <span>✅</span>
+          </article>
+
+          <article class="stat-card red">
+            <div>
+              <p>Failed</p>
+              <h2 id="failedStudents">0</h2>
+            </div>
+            <span>❌</span>
+          </article>
+
+          <article class="stat-card purple">
+            <div>
+              <p>Average Performance</p>
+              <h2 id="averagePerformance">0%</h2>
+            </div>
+            <span>📊</span>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Recent Students</h3>
+              <a href="pages/students.html">View all</a>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Student ID</th>
+                  <th>Name</th>
+                  <th>Programme</th>
+                  <th>Average</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="recentStudentsTable"></tbody>
+            </table>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Quick Notes</h3>
+            </div>
+            <div class="quick-notes">
+              <p>• Keep student records updated.</p>
+              <p>• Enter academic results for each student.</p>
+              <p>• Check failed students and support them early.</p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="data/students.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
